@@ -1,0 +1,14 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run server-dev\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node start-server.js start",
+    "server-dev": "cd server && npm run dev",
+    "client": "cd client && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

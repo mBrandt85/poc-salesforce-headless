@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  client:
+    build: ./client
+    ports:
+      - 3000:3000
+    stdin_open: true
+    networks:
+      - poc-headless-salesforce
+
+  server:
+    build: ./server
+    ports:
+      - 3001:3001
+    networks:
+      - poc-headless-salesforce
+
+networks:
+  poc-headless-salesforce:
+    driver: bridge
